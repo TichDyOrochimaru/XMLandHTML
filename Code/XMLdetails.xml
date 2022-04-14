@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<peoplelist>
+	<people id="01">
+		<fullname>Lương Thế Tài</fullname>
+		<age>18</age>
+		<title>Sinh viên</title>
+		<room>VNCERT</room>
+	</people>
+	<people id="02">
+		<fullname>Nguyễn Thị Bích Tuệ</fullname>
+		<age>19</age>
+		<title>Sinh viên</title>
+		<room>VNCERT</room>
+	</people>
+	<people id="03">
+		<fullname>Phan Minh Quân</fullname>
+		<age>20</age>
+		<title>Sinh viên</title>
+		<room>VNCERT</room>
+	</people>
+	<people id="04">
+		<fullname>Đặng Văn Sâm</fullname>
+		<age>18</age>
+		<title>Sinh viên</title>
+		<room>VNCERT</room>
+	</people>
+	<people id="05">
+		<fullname>Mã Quốc Phong</fullname>
+		<age>17</age>
+		<title>Sinh viên</title>
+		<room>VNCERT</room>
+	</people>
+	<people id="06">
+		<fullname>Tô Xuân Trường</fullname>
+		<age>20</age>
+		<title>Sinh viên</title>
+		<room>VNCERT</room>
+	</people>
+	<people id="07">
+		<fullname>Phùng Văn Tài</fullname>
+		<age>18</age>
+		<title>Sinh viên</title>
+		<room>VNCERT</room>
+	</people>
+	<people id="08">
+		<fullname>Lê Minh Hưng</fullname>
+		<age>20</age>
+		<title>Sinh viên</title>
+		<room>VNCERT</room>
+	</people>
+	<people id="09">
+		<fullname>Nghiêm Thị Thu Thủy</fullname>
+		<age>22</age>
+		<title>Sinh viên</title>
+		<room>VNCERT</room>
+	</people>
+
+</peoplelist>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<head>
+	<title>Đọc dữ liệu theo dạng bảng</title>
+
+	<!-- CSS -->
+	<style>
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		th,
+		td {
+			text-align: left;
+			padding: 8px;
+		}
+
+		tr:nth-child(even) {
+			background-color: #7ce2af
+		}
+
+		th {
+			background-color: #7c0f65;
+			color: white;
+		}
+
+		.button {
+			position: relative;
+			text-align: center;
+			padding: 20px;
+			border: 4px solid rgb(55, 12, 211);
+			background: rgba(20, 192, 4, 0.5);
+			color: rgb(230, 36, 78);
+			outline: none;
+			border-radius: 30px;
+			font-size: 30px;
+			width: 500px;
+
+		}
+
+		.button:hover {
+			color: black;
+			background: white;
+		}
+	</style>
+
+
+
+
+
+	<!--Đọc liệu-->
+	<script>
+		function loadXMLDoc() {
+			var xmlhttp = new XMLHttpRequest(); //Tạo request
+			xmlhttp.onreadystatechange = function () {
+
+				// Request kết thúc và ta chuyển qua lấy response
+				// Reponse sẵn sàng và trạng thái thiết lập = True 
+				if (this.readyState == 4 && this.status == 200) {
+					empDetails(this);
+				}
+			};
+
+			// Tệp cần đọc XMLdetails.xml ở bên ngoài 
+			xmlhttp.open("GET", "XMLdetails.xml", true);
+			xmlhttp.send();
+		}
+
+		function empDetails(xml) {
+			var i;
+			var xmlDoc = xml.responseXML;
+			var table =
+				`<tr>
+					<th>fullname</th><th>age</th>
+					<th>title</th><th>Room</th>
+				</tr>`;
+			var x = xmlDoc.getElementsByTagName("people");
+
+			// Bắt đầu tìm dữ liệu bằng TagName
+			for (i = 0; i < x.length; i++) {
+				table += "<tr><td>" +
+					x[i].getElementsByTagName("fullname")[0]
+					.childNodes[0].nodeValue + "</td><td>" +
+					x[i].getElementsByTagName("age")[0]
+					.childNodes[0].nodeValue + "</td><td>" +
+					x[i].getElementsByTagName("title")[0]
+					.childNodes[0].nodeValue + "</td><td>" +
+					x[i].getElementsByTagName("room")[0]
+					.childNodes[0].nodeValue + "</td></tr>";
+			}
+
+			// In dữ liệu theo dạng bảng 
+			document.getElementById("id").innerHTML = table;
+		}
+	</script>
+</head>
+
+<body>
+	<center>
+		<button type="button" class="button"
+			onclick="loadXMLDoc()">
+			Thông tin 
+		</button>
+	</center>
+	
+	<br><br>
+	<table id="id"></table>
+</body>
+
+</html>
